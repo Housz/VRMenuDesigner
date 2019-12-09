@@ -37,7 +37,7 @@ public class RingLayout : LayoutGroup
         CalculateRadial();
     }
 #endif
-    void CalculateRadial()
+    public void CalculateRadial()
     {
         m_Tracker.Clear();
         if (transform.childCount == 0)
@@ -78,4 +78,5 @@ public class RingLayout : LayoutGroup
             }
         }
     }
+
 }

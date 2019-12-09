@@ -40,4 +40,5 @@ public class RingButton : ButtonInterface
     {
         this.GetComponent<Image>().sprite = newIcon;
     }
+
 }

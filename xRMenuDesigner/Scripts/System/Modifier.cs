@@ -250,11 +250,12 @@ public class Modifier : EditorWindow
                         currButtonText = EditorGUILayout.TextField("    Name: ", currButtonText);
                         currButtonPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/xRMenuDesigner/Resources/Prefabs/DefaultMenu/DefaultButton.prefab", typeof(GameObject));
                         currButtonType = EditorGUILayout.IntPopup("    Type: ", currButtonType, _typeNames, _types);
+                        currIcon = (Sprite)EditorGUILayout.ObjectField(currIcon, typeof(Sprite), true);
                         if (currButtonType == 1)
                         {
                             _buttonSubMenu = (GameObject)EditorGUILayout.ObjectField(_buttonSubMenu, typeof(GameObject), true);
                         }
-                        currIcon = (Sprite)EditorGUILayout.ObjectField(currIcon, typeof(Sprite), true);
+                        
                         if (GUILayout.Button("ADD a Button"))
                         {
                             GameObject tempButton;
@@ -326,6 +327,8 @@ public class Modifier : EditorWindow
                         currButtonText = EditorGUILayout.TextField("    Name: ", currButtonText);
                         currButtonPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/xRMenuDesigner/Resources/Prefabs/Win10StyleMenu/Win10StyleButton.prefab", typeof(GameObject));
                         currButtonType = EditorGUILayout.IntPopup("    Type: ", currButtonType, _typeNames, _types);
+                        currIcon = (Sprite)EditorGUILayout.ObjectField(currIcon, typeof(Sprite), true);
+
                         if (currButtonType == 1)
                         {
                             _buttonSubMenu = (GameObject)EditorGUILayout.ObjectField(_buttonSubMenu, typeof(GameObject), true);
@@ -350,6 +353,8 @@ public class Modifier : EditorWindow
                                         tempButtonScirpt.SetAllowSubMenu(false);
                                         tempButtonScirpt.SetSubMenuRef(null);
                                     }
+                                    tempButtonScirpt.SetIcon(currIcon);
+                                    tempButtonScirpt.SetText(currButtonText);
                                     break;
                                 }
                             }
@@ -384,6 +389,8 @@ public class Modifier : EditorWindow
 
                         currButtonText = EditorGUILayout.TextField("    Name: ", currButtonText);
                         currButtonPrefab = (GameObject)AssetDatabase.LoadAssetAtPath("Assets/xRMenuDesigner/Resources/Prefabs/RingMenu/RingButton.prefab", typeof(GameObject));
+                        currIcon = (Sprite)EditorGUILayout.ObjectField(currIcon, typeof(Sprite), true);
+
                         if (currButtonType == 1)
                         {
                             _buttonSubMenu = (GameObject)EditorGUILayout.ObjectField(_buttonSubMenu, typeof(GameObject), true);
@@ -392,11 +399,15 @@ public class Modifier : EditorWindow
                         {
                             GameObject tempButton;
 
+                            RingButton tempButtonScirpt;
                             foreach (Transform currTrans in trans)
                             {
                                 if (currTrans.tag == "ButtonPanel")
                                 {
                                     tempButton = Instantiate(currButtonPrefab, currTrans);
+                                    tempButtonScirpt = tempButton.GetComponent<RingButton>();
+                                    tempButtonScirpt.SetIcon(currIcon);
+                                    tempButtonScirpt.SetText(currButtonText);
                                     break;
                                 }
                             }

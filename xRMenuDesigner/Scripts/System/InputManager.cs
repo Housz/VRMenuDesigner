@@ -12,6 +12,9 @@ public class InputManager : MonoBehaviour
 
     public SteamVR_Action_Vector2 touchPosition = null;
 
+    public SteamVR_Action_Boolean mypress = null;
+
+
     [Header("Scene Objects")]
     public RadialMenu radialMenu = null;
     
@@ -50,5 +53,10 @@ public class InputManager : MonoBehaviour
         radialMenu.ActivateHighlightedSection();
     }
 
+    private void Press(SteamVR_Action_Boolean fromAction, SteamVR_Input_Sources fromSource)
+    {
+        print("Press");
+        radialMenu.ActivateHighlightedSection();
+    }
 }
 
