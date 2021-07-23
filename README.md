@@ -1,5 +1,8 @@
-# xRMenuDesigner
-*A toolkit for auto creating/modifying xR User Interface (Unity + htc VIVE)*
+# VRMenuDesigner
+*A toolkit for auto creating/modifying VR User Interface (Unity + htc VIVE)*
+
+This project was funded by Wearable Computer Lab at University of South Australia. Supervisor: Bruce H. Thomas.
+
 
 ## 0. Introduce
 This project is a toolkit for auto creating/modifying xR User Interface in Unity3D and htc Vive. Users can conveniently generate multiple types of UI by our toolkit.
