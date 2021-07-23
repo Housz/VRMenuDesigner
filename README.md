@@ -1,7 +1,6 @@
-# VRMenuDesigner
-*A toolkit for auto creating/modifying VR User Interface (Unity + htc VIVE)*
+# VRMenuDesigner: A toolkit for automatically generating and modifying VR menus 
 
-This project was funded by Wearable Computer Lab at University of South Australia. Supervisor: Bruce H. Thomas.
+* This project was funded by Wearable Computer Lab at University of South Australia. Supervisor: Bruce H. Thomas.*
 
 
 ## 0. Introduce
