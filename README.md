@@ -1,6 +1,16 @@
 # VRMenuDesigner: A toolkit for automatically generating and modifying VR menus 
 
-arXiv: https://arxiv.org/abs/2109.10172
+Please cite our paper if you use this code for your research:
+```
+@inproceedings{hou2021vrmenudesigner,
+  title={VRMenuDesigner: A toolkit for automatically generating and modifying VR menus},
+  author={Hou, Shengzhe and Thomas, Bruce H and Lu, Xinming},
+  booktitle={2021 IEEE International Conference on Artificial Intelligence and Virtual Reality (AIVR)},
+  pages={154--159},
+  year={2021},
+  organization={IEEE}
+}
+```
 
 ## 0. Introduce
 This project is a toolkit for auto creating/modifying xR User Interface in Unity3D and htc Vive. Users can conveniently generate multiple types of UI by our toolkit.
